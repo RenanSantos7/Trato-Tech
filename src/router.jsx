@@ -1,34 +1,10 @@
 import {createBrowserRouter} from 'react-router-dom'
+import Base from './pages/Base'
 
 const router = createBrowserRouter([
   {
       path: "/",
-      element: <Home />
-  },
-  {
-      path: "/login",
-      element: <Login />
-  },
-  {
-      path: "/register",
-      element: <Cadastro />
-  },
-  {
-      path: "/forgotpassword",
-      element: <RecoverPassword />
-  },
-  {
-      path: "/produtos",
-      children: [
-          {
-              path: '/produtos',
-              element: <PaginaProdutos />,
-          },
-          {
-              path: '/produtos/:id',
-              element: <ProdutoIndividual />
-          }
-      ],
+      element: <Base />
   }
 ])
 

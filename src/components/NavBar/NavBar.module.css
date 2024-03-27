@@ -1,0 +1,26 @@
+.container {
+    width: var(--page-width);
+    margin-inline: auto;
+    padding-block: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-shadow: var(--shadow);
+    color: white;
+    background-color: var(--cor1);
+    
+    nav, .left {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .left {
+        gap: 3rem;
+    }
+}
+
+.selecionado {
+    font-weight: 600;
+    text-decoration: underline;
+}
