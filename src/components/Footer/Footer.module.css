@@ -1,0 +1,24 @@
+.rodape {
+    width: 100vw;
+    background-color: var(--cor1);
+    background-image: url('fundo.png');
+    background-blend-mode: hard-light;
+    padding-block: 1.5rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    color: white;
+
+    .destaque {
+        font-weight: 500;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.redesSociais {
+    display: flex;
+    gap: 3rem
+}

@@ -1,13 +1,10 @@
 .container {
-    width: var(--page-width);
-    margin-inline: auto;
-    padding-block: 3rem;
     display: flex;
     justify-content: space-between;
+    padding-block: 3rem;
     align-items: center;
     text-shadow: var(--shadow);
     color: white;
-    background-color: var(--cor1);
     
     nav, .left {
         display: flex;

@@ -1,32 +1,33 @@
-import classNames from 'classnames'
-import Busca from '../Busca/Busca'
 import styles from './NavBar.module.css'
-import { NavLink } from 'react-router-dom'
-import { useLocation } from 'react-router-dom'
+import Busca from './Busca/Busca'
 import Logo from '../Logo/Logo'
+import { NavLink } from 'react-router-dom'
+import classNames from 'classnames'
 
 export default function NavBar() {
-    const location = useLocation().pathname
 
     return (
-        <div className={styles.container}>
+        <header className={classNames(styles.container, 'largura')}>
             <nav>
                 <Logo />
-                <NavLink 
-                    className={`${location === '/' ? styles.selecionado : ''}`}
+                <NavLink
                     to='/'
+                    className={({ isActive }) => isActive ? styles.selecionado : ""}
                 >Página Inicial</NavLink>
-                <NavLink 
-                    className={`${location === '/visitados' ? styles.selecionado : ''}`} 
+                <NavLink
                     to='/visitados'
+                    className={({ isActive }) => isActive ? styles.selecionado : ""}
                 >Mais visitados</NavLink>
             </nav>
 
             <div className={styles.left}>
                 <Busca />
 
-                <NavLink to='/login'>Login</NavLink>
+                <NavLink
+                    to='/login'
+                    className={({ isActive }) => isActive ? styles.selecionado : ""}
+                >Login</NavLink>
             </div>
-        </div>
+        </header>
     )
 }
