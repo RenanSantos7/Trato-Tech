@@ -2,21 +2,21 @@ import BtCarrinho from './BtCarrinho/BtCarrinho'
 import BtFavoritar from './BtFavoritar/BtFavoritar'
 import styles from './Card.module.css'
 
-export default function Card({img, titulo, descricao, anunciante, preco, favorito=false}) {
+export default function Card({obj, favorito=false}) {
     return (
         <article className={styles.card}>
             <header className={styles.imgContainer}>
-                <img src={img} alt="" />
+                <img src={obj.foto} alt="" />
             </header>
             <section>
-                <h3 className={styles.titulo}>{titulo}</h3>
-                <p>{descricao}</p>
-                <p><b>Anunciante: {anunciante}</b></p>
+                <h3 className={styles.titulo}>{obj.nome}</h3>
+                <p>Descrição: {obj.descricao}</p>
+                <p><b>Anunciante: {obj.anunciante}</b></p>
             </section>
 
             <footer className={styles.footer}>
                 <div className={styles.preco}>
-                    {preco.toLocaleString('pt-BR', {style:'currency', currency: 'BRL'})}
+                    {obj.preco.toLocaleString('pt-BR', {style:'currency', currency: 'BRL'})}
                 </div>
                 <div className={styles.botoes}>
                     <BtFavoritar favorito={favorito} />
