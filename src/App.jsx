@@ -1,11 +1,12 @@
 import { RouterProvider } from "react-router-dom";
 import router from "./router";
-import { DataProvider } from "./contexts/DataContext";
+import { Provider } from "react-redux";
+import store from "./store";
 
 export default function App() {
   return (
-    <DataProvider>
+    <Provider store={store}>
       <RouterProvider router={router} />
-    </DataProvider>
+    </Provider>
   )
 }

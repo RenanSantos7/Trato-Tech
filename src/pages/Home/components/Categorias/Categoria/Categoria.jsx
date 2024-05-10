@@ -1,12 +1,19 @@
+import { useEffect } from 'react'
 import styles from './Categoria.module.css'
 import { Link } from "react-router-dom"
 
-export default function Categoria({ nome }) {
-    const image = `/assets/categorias/${nome.toLowerCase()}.jpg`
+export default function Categoria({ categoria }) {
+    //const image = `/assets/categorias/${nome.toLowerCase()}.jpg`
+
+    const { id, nome, image } = categoria
+
+    useEffect(() => {
+        console.log(image)
+    }, [image])
 
     return (
         <Link
-            to={`/categoria/${nome}`}
+            to={`/categoria/${id}`}
             style={{
                 display: 'flex',
                 flexDirection: 'column',
