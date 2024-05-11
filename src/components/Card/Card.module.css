@@ -2,6 +2,9 @@
     background-color: var(--cor3);
     width: 384px;
     box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     section {
         padding: 1rem;
@@ -17,7 +20,7 @@
 }
 
 .imgContainer {
-    height: 10rem;
+    height: 12rem;
 }
 
 .titulo {

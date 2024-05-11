@@ -1,13 +1,12 @@
+import { useSelector } from 'react-redux'
 import { Background, CardsContainer, Hero, Main } from '../../components'
 import Categorias from './components/Categorias/Categorias'
-import styles from './Home.module.css'
-// import { useContext } from 'react'
-// import { DataContext } from '../../contexts/DataContext'
 
 export default function Home() {
 
-    // const {produtos} = useContext(DataContext)
-
+    const itens = useSelector(state => state.itens)
+    const itensSelecionados = itens.slice(0, 6)
+    
     return (
         <>
             <Background height={850}/>
@@ -20,7 +19,10 @@ export default function Home() {
 
                 <Categorias />
 
-                <CardsContainer titulo='Anúncios recentes' array={[]} />
+                <CardsContainer
+                    titulo='Anúncios recentes'
+                    array={itensSelecionados}
+                />
             </Main>
         </>
     )

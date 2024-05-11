@@ -14,7 +14,7 @@ const initialState = [
 		descricao: 'Encontre aqui equipamentos para deixar seu carro com a sua cara!',
 	},
 	{
-		id: 'jogos ',
+		id: 'jogos',
 		nome: 'Jogos',
 		image: '/assets/categorias/jogos.jpg',
 		descricao: 'Adquira os consoles e jogos mais atuais do mercado! ',

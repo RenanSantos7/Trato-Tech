@@ -1,15 +1,9 @@
-import { useEffect } from 'react'
 import styles from './Categoria.module.css'
 import { Link } from "react-router-dom"
 
 export default function Categoria({ categoria }) {
-    //const image = `/assets/categorias/${nome.toLowerCase()}.jpg`
 
     const { id, nome, image } = categoria
-
-    useEffect(() => {
-        console.log(image)
-    }, [image])
 
     return (
         <Link
