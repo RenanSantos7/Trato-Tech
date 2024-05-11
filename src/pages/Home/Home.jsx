@@ -1,9 +1,6 @@
-import styles from './Home.module.css'
-import Hero from '../../components/Hero/Hero'
-import classNames from 'classnames'
-import Background from '../../components/Background/Background'
+import { Background, CardsContainer, Hero, Main } from '../../components'
 import Categorias from './components/Categorias/Categorias'
-import CardsContainer from '../../components/CardsContainer/CardsContainer'
+import styles from './Home.module.css'
 // import { useContext } from 'react'
 // import { DataContext } from '../../contexts/DataContext'
 
@@ -14,16 +11,17 @@ export default function Home() {
     return (
         <>
             <Background height={850}/>
-            <main className={classNames(styles.home, 'largura')}>
+            <Main>
                 <Hero
                     titulo='Classificados Tech'
-                    foto='/assets/categorias/relogio.jpg'
+                    image='/assets/categorias/relogio.jpg'
+                    descricao='Compre, venda, anuncie, troque diversos tipos de produtos e serviços da área de tecnologia!'
                 />
 
                 <Categorias />
 
-                {/* <CardsContainer titulo='Anúncios recentes' array={produtos} /> */}
-            </main>
+                <CardsContainer titulo='Anúncios recentes' array={[]} />
+            </Main>
         </>
     )
 }

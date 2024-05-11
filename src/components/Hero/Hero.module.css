@@ -30,4 +30,8 @@
     height: 380px;
     border-radius: 144px;
     overflow: hidden;
+
+    img {
+        object-fit: cover;
+    }
 }
