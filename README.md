@@ -1,11 +1,12 @@
-`![Print do Banner](./public/assets/print-banner.png)`
+<!-- ![Print do Banner](./public/assets/print-banner.png) -->
 
 # Trato-Tech
 
 Este é um projeto em React desenvolvido no curso *React: gerenciamento de estados globais com Redux* da [Alura](https://cursos.alura.com.br/).
 
->[!INFO] Repositório original:
->[https://github.com/alura-cursos/trato-tech](https://github.com/alura-cursos/trato-tech)
+> [!NOTE]
+> Repositório original:
+> [https://github.com/alura-cursos/trato-tech](https://github.com/alura-cursos/trato-tech)
 
 ## Tecnologias utilizadas
 
