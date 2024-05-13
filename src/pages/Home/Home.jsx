@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import { Background, CardsContainer, Hero, Main } from '../../components'
+import { Background, CardsContainer, Hero, Main, NavBar } from '../../components'
 import Categorias from './components/Categorias/Categorias'
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
     
     return (
         <>
-            <Background height={850}/>
+            <Background height={850} />
             <Main>
                 <Hero
                     titulo='Classificados Tech'

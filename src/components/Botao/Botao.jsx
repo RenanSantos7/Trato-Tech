@@ -1,23 +1,39 @@
-import styled from "styled-components"
+import classNames from 'classnames'
+import styles from './Botao.module.css'
 
-const StyledButton = styled.button`
-    padding: 1.5rem 2rem;
-    background-color: var(--cor4);
-    border-radius: 3rem;
-    font-weight: 600;
-    font-size: 1.25rem;
-    text-align: center;
-    transition: all .6s ease-in-out;
+export default function Botao({
+	type = 'button',
+	children,
+	tamanho = 'normal',
+	variante,
+}) {
+	let pd = ''
+	let fsize = ''
+	switch (tamanho) {
+		case 'grande':
+			pd = '1.5rem 2rem'
+			fsize = '1.25rem'
+			break
+		case 'normal':
+			pd = '1rem 1.5rem'
+			fsize = '1.15rem'
+			break
+		case 'pequeno':
+			pd = '.5rem 1rem'
+			fsize = '1rem'
+			break
+	}
 
-    &:hover {
-        background-color: var(--cor2);
-    }
-`
-
-export default function Botao({type = 'submit', children}) {
-    return (
-        <StyledButton type={type}>
-            {children}
-        </StyledButton>
-    )
+	return (
+		<button
+			type={type}
+			className={classNames(styles.botao, styles[variante])}
+			style={{
+				padding: pd,
+				fontSize: fsize,
+			}}
+		>
+			{children}
+		</button>
+	)
 }

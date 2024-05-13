@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import { Background, CardsContainer, Hero, Main } from '../../components'
+import { Background, CardsContainer, Hero, Main, NavBar } from '../../components'
 import { useParams } from 'react-router-dom'
 
 export default function PagCategoria() {

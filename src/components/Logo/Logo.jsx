@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { styled } from 'styled-components'
 
 const StyledLogo = styled.h1`
@@ -13,8 +14,10 @@ const StyledLogo = styled.h1`
 export default function Logo() {
 	return (
 		<StyledLogo>
-			TRATO
-			<span className='destaque'>TECH</span>
+			<Link to='/'>
+				TRATO
+				<span className='destaque'>TECH</span>
+			</Link>
 		</StyledLogo>
 	)
 }

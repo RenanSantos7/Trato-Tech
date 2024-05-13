@@ -1,0 +1,51 @@
+.hero {
+    display: flex;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.imgContainer {
+    --tamanho: 400px;
+    width: var(--tamanho);
+    height: var(--tamanho);
+
+    img {
+        object-fit: cover;
+    }
+}
+
+.dados{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+
+    h2 {
+        color: var(--cor1);
+        font-size: 2.5rem;
+        line-height: 1.2;
+        font-weight: 500;
+    }
+
+    p {
+        line-height: 1.5;
+        font-size: 1rem;
+    }
+
+    .preco {
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+}
+
+.btContainer {
+    display: flex;
+    gap: 1.5rem
+}

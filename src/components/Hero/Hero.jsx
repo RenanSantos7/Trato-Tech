@@ -8,7 +8,7 @@ export default function HeroCateg({ titulo, image, descricao }) {
             <div className={styles.texto}>
                 <h1>{titulo}</h1>
                 <p>{descricao}</p>
-                <Botao>Quero anunciar</Botao>
+                <Botao tamanho='grande'>Quero anunciar</Botao>
             </div>
             <div className={styles.foto}>
                 <img src={image} alt="" />

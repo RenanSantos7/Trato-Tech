@@ -3,6 +3,7 @@ import Base from './pages/Base'
 import Home from './pages/Home/Home'
 import Erro404 from './pages/Erro404/Erro404'
 import PagCategoria from './pages/PagCategoria/PagCategoria'
+import PagProduto from './pages/PagProduto/PagProduto'
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: '/categoria/:categoria',
         element: <PagCategoria />
+      },
+      {
+        path: '/produto/:id',
+        element: <PagProduto />
       },
       {
         path: '*',

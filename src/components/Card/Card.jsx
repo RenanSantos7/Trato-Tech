@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import BtCarrinho from './BtCarrinho/BtCarrinho'
 import BtFavoritar from './BtFavoritar/BtFavoritar'
 import styles from './Card.module.css'
@@ -5,7 +6,7 @@ import styles from './Card.module.css'
 export default function Card({ obj }) {
 	return (
 		<article className={styles.card}>
-			<div>
+			<Link to={`/produto/${obj.id}`}>
 			    <header className={styles.imgContainer}>
     				<img src={obj.foto} alt='' />
     			</header>
@@ -16,15 +17,15 @@ export default function Card({ obj }) {
     					<b>Anunciante: {obj.anunciante}</b>
     				</p>
     			</section>
-			</div>
+			</Link>
 
 			<footer className={styles.footer}>
-				<div className={styles.preco}>
+				<button className={styles.preco}>
 					{obj.preco.toLocaleString('pt-BR', {
 						style: 'currency',
 						currency: 'BRL',
 					})}
-				</div>
+				</button>
 				<div className={styles.botoes}>
 					<BtFavoritar favorito={obj.favorito} />
 					<BtCarrinho />
