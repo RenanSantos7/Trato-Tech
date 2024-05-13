@@ -259,6 +259,16 @@ const orgProdutos = [
 		categoria: 'automotivos',
 		anunciante: 'Renan Santos'
 	},
+	{
+		id: 26,
+		titulo: 'Notas autoadesivas',
+		descricao: 'Nota Autoadesiva 38X51Mm 100Flsx4 Neon, blocos em 4 cores neon contendo 100 folhas de cada cor.',
+		foto: 'https://m.media-amazon.com/images/I/517LfXVUw6L._AC_UF894,1000_QL80_DpWeblab_.jpg',
+		favorito: false,
+		preco: 12.99,
+		categoria: 'escritorio',
+		anunciante: 'Renan Santos'
+	},
 ]
 
 export default orgProdutos

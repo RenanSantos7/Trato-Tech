@@ -4,6 +4,7 @@ import Home from './pages/Home/Home'
 import Erro404 from './pages/Erro404/Erro404'
 import PagCategoria from './pages/PagCategoria/PagCategoria'
 import PagProduto from './pages/PagProduto/PagProduto'
+import PagCarrinho from './pages/PagCarrinho/PagCarrinho'
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: '/produto/:id',
         element: <PagProduto />
+      },
+      {
+        path: '/carrinho',
+        element: <PagCarrinho />
       },
       {
         path: '*',

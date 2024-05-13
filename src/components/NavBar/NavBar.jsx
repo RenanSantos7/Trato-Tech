@@ -3,6 +3,7 @@ import Busca from './Busca/Busca'
 import Logo from '../Logo/Logo'
 import { NavLink } from 'react-router-dom'
 import classNames from 'classnames'
+import IcoCarrinho from './IcoCarrinho/IcoCarrinho'
 
 export default function NavBar({isLoggedIn = false}) {
 	return (
@@ -11,13 +12,13 @@ export default function NavBar({isLoggedIn = false}) {
 				<Logo />
 				<NavLink
 					to='/'
-					className={({ isActive }) => isActive && styles.selecionado}
+					className={({ isActive }) => isActive ? styles.selecionado : ''}
 				>
 					Página Inicial
 				</NavLink>
 				<NavLink
 					to='/visitados'
-					className={({ isActive }) => isActive && styles.selecionado}
+					className={({ isActive }) => isActive ? styles.selecionado : ''}
 				>
 					Mais visitados
 				</NavLink>
@@ -28,10 +29,12 @@ export default function NavBar({isLoggedIn = false}) {
 
 				<NavLink
 					to='/login'
-					className={({ isActive }) => isActive && styles.selecionado}
+					className={({ isActive }) => isActive ? styles.selecionado : ''}
 				>
 					Login
-                </NavLink>
+				</NavLink>
+				
+				<IcoCarrinho />
                 
                 {isLoggedIn && (
                     <div className={styles.fotoUsuario}>
