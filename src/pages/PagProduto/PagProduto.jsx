@@ -1,5 +1,5 @@
-import { useSelector } from 'react-redux'
 import styles from './PagProduto.module.css'
+import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { Background, Main, NavBar } from '../../components'
 import HeroProd from './components/HeroProd/HeroProd'
@@ -7,7 +7,7 @@ import Recomendados from '../../components/Recomendados/Recomendados'
 
 export default function PagProduto() {
 
-    const produtos = useSelector(state => state.itens)
+    const produtos = useSelector(state => state.produtos)
     const { id } = useParams()
     const produtoSelecionado = produtos.find(produto => (
         produto.id == id
@@ -37,7 +37,12 @@ export default function PagProduto() {
 
                 <div className={styles.comentario}>
                     <p>⭐️⭐️⭐️⭐️⭐️</p>
-                    <p>Gostei muito do produto no que diz respeito ao áudio,entretanto, pelo valor eu esperava um microfone excelente, mas na realidade o microfone é bem mediano pra baixo.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, dolorum cupiditate? Dolorum consectetur est, numquam nihil hic accusantium eius mollitia dolorem temporibus aliquid eos voluptatem fugit ratione officiis officia nostrum!</p>
+                </div>
+
+                <div className={styles.comentario}>
+                    <p>⭐️⭐️⭐️</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, dolorum cupiditate? Dolorum consectetur est, numquam nihil hic accusantium eius mollitia dolorem temporibus aliquid eos voluptatem fugit ratione officiis officia nostrum!</p>
                 </div>
 
                 <Recomendados />

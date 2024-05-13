@@ -4,8 +4,8 @@ import Categorias from './components/Categorias/Categorias'
 
 export default function Home() {
 
-    const itens = useSelector(state => state.itens)
-    const itensSelecionados = itens.slice(0, 6)
+    const produtos = useSelector(state => state.produtos)
+    const produtosSelecionados = produtos.slice(0, 6)
     
     return (
         <>
@@ -21,7 +21,7 @@ export default function Home() {
 
                 <CardsContainer
                     titulo='Anúncios recentes'
-                    array={itensSelecionados}
+                    array={produtosSelecionados}
                 />
             </Main>
         </>

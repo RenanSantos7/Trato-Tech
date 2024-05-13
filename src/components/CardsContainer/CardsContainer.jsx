@@ -7,7 +7,7 @@ export default function CardsContainer({ titulo, array }) {
             <h2 className={styles.titulo}>{titulo}</h2>
             <div className={styles.cardsContainer}>
                 {array?.map(item => (
-                    <Card obj={item} key={item.id} />
+                    <Card produto={item} key={item.id} />
                 ))}
             </div>
         </>

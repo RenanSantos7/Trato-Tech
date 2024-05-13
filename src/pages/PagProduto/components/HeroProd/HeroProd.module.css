@@ -6,11 +6,12 @@
 
 .imgContainer {
     --tamanho: 400px;
+    background-color: white;
     width: var(--tamanho);
     height: var(--tamanho);
 
     img {
-        object-fit: cover;
+        object-fit: scale-down;
     }
 }
 

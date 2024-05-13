@@ -1,6 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
-
-const initialState = [
+const orgProdutos = [
 	{
 		id: 0,
 		titulo: 'Assistente virtual',
@@ -9,6 +7,7 @@ const initialState = [
 		favorito: false,
 		preco: 285,
 		categoria: 'eletronicos',
+		anunciante: 'Fulano de Tal'
 	},
 	{
 		id: 1,
@@ -18,6 +17,7 @@ const initialState = [
 		favorito: false,
 		preco: 900,
 		categoria: 'eletronicos',
+		anunciante: 'Fulano de Tal'
 	},
 	{
 		id: 2,
@@ -27,6 +27,7 @@ const initialState = [
 		favorito: false,
 		preco: 637,
 		categoria: 'eletronicos',
+		anunciante: 'Fulano de Tal'
 	},
 	{
 		id: 3,
@@ -36,6 +37,7 @@ const initialState = [
 		favorito: false,
 		preco: 1600,
 		categoria: 'eletronicos',
+		anunciante: 'Fulano de Tal'
 	},
 	{
 		id: 4,
@@ -45,6 +47,7 @@ const initialState = [
 		favorito: false,
 		preco: 447,
 		categoria: 'eletronicos',
+		anunciante: 'Fulano de Tal'
 	},
 	{
 		id: 5,
@@ -54,6 +57,7 @@ const initialState = [
 		favorito: false,
 		preco: 45.9,
 		categoria: 'automotivos',
+		anunciante: 'Fulano de Tal'
 	},
 	{
 		id: 6,
@@ -63,6 +67,7 @@ const initialState = [
 		favorito: false,
 		preco: 150,
 		categoria: 'automotivos',
+		anunciante: 'Fulano de Tal'
 	},
 	{
 		id: 7,
@@ -72,6 +77,7 @@ const initialState = [
 		favorito: false,
 		preco: 149.9,
 		categoria: 'automotivos',
+		anunciante: 'Fulano de Tal'
 	},
 	{
 		id: 8,
@@ -81,6 +87,7 @@ const initialState = [
 		favorito: false,
 		preco: 290,
 		categoria: 'automotivos',
+		anunciante: 'Fulano de Tal'
 	},
 	{
 		id: 9,
@@ -90,6 +97,7 @@ const initialState = [
 		favorito: false,
 		preco: 59.9,
 		categoria: 'automotivos',
+		anunciante: 'Fulano de Tal'
 	},
 	{
 		id: 10,
@@ -99,6 +107,7 @@ const initialState = [
 		favorito: false,
 		preco: 4300,
 		categoria: 'jogos',
+		anunciante: 'Fulano de Tal'
 	},
 	{
 		id: 11,
@@ -108,6 +117,7 @@ const initialState = [
 		favorito: false,
 		preco: 299.9,
 		categoria: 'jogos',
+		anunciante: 'Fulano de Tal'
 	},
 	{
 		id: 12,
@@ -117,6 +127,7 @@ const initialState = [
 		favorito: false,
 		preco: 4349,
 		categoria: 'jogos',
+		anunciante: 'Fulano de Tal'
 	},
 	{
 		id: 13,
@@ -126,6 +137,7 @@ const initialState = [
 		favorito: false,
 		preco: 279,
 		categoria: 'jogos',
+		anunciante: 'Fulano de Tal'
 	},
 	{
 		id: 14,
@@ -135,6 +147,7 @@ const initialState = [
 		favorito: false,
 		preco: 349.9,
 		categoria: 'jogos',
+		anunciante: 'Fulano de Tal'
 	},
 	{
 		id: 15,
@@ -144,6 +157,7 @@ const initialState = [
 		favorito: false,
 		preco: 19.9,
 		categoria: 'escritorio',
+		anunciante: 'Fulano de Tal'
 	},
 	{
 		id: 16,
@@ -153,6 +167,7 @@ const initialState = [
 		favorito: false,
 		preco: 285,
 		categoria: 'escritorio',
+		anunciante: 'Fulano de Tal'
 	},
 	{
 		id: 17,
@@ -162,6 +177,7 @@ const initialState = [
 		favorito: false,
 		preco: 629,
 		categoria: 'escritorio',
+		anunciante: 'Fulano de Tal'
 	},
 	{
 		id: 18,
@@ -171,6 +187,7 @@ const initialState = [
 		favorito: false,
 		preco: 27.6,
 		categoria: 'escritorio',
+		anunciante: 'Fulano de Tal'
 	},
 	{
 		id: 19,
@@ -180,6 +197,7 @@ const initialState = [
 		favorito: false,
 		preco: 44.9,
 		categoria: 'escritorio',
+		anunciante: 'Fulano de Tal'
 	},
 	{
 		id: 20,
@@ -189,6 +207,7 @@ const initialState = [
 		favorito: false,
 		preco: 2600,
 		categoria: 'som',
+		anunciante: 'Fulano de Tal'
 	},
 	{
 		id: 21,
@@ -198,6 +217,7 @@ const initialState = [
 		favorito: false,
 		preco: 3359,
 		categoria: 'som',
+		anunciante: 'Fulano de Tal'
 	},
 	{
 		id: 22,
@@ -207,6 +227,7 @@ const initialState = [
 		favorito: false,
 		preco: 5817.33,
 		categoria: 'som',
+		anunciante: 'Fulano de Tal'
 	},
 	{
 		id: 23,
@@ -216,6 +237,7 @@ const initialState = [
 		favorito: false,
 		preco: 1199,
 		categoria: 'som',
+		anunciante: 'Fulano de Tal'
 	},
 	{
 		id: 24,
@@ -225,12 +247,18 @@ const initialState = [
 		favorito: false,
 		preco: 782.91,
 		categoria: 'som',
+		anunciante: 'Fulano de Tal'
+	},
+	{
+		id: 25,
+		titulo: 'Coifa Câmbio Palio Economy',
+		descricao: 'Produto de excelente qualidade, alta resistência, funcional, perfeito para quem teve recentes problemas com a coifa original do seu carro. Compatível com Palio Economy 2011 2012 2013 2014',
+		foto: 'https://http2.mlstatic.com/D_NQ_NP_955826-MLB48818770882_012022-O.webp',
+		favorito: false,
+		preco: 47.6,
+		categoria: 'automotivos',
+		anunciante: 'Renan Santos'
 	},
 ]
 
-const itensSlice = createSlice({
-	name: 'itens',
-	initialState,
-})
-
-export default itensSlice
+export default orgProdutos
