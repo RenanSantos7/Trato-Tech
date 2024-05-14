@@ -1,0 +1,54 @@
+.inputQtd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: auto;
+    background-color: var(--inputbg);
+    border: 1px solid var(--cinza);
+    padding: 0;
+    border-radius: var(--border-radius-menor);
+    min-height: 2.5rem;
+    align-self: start;
+    overflow: hidden;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.label {
+    margin-right: 1.5rem;
+}
+
+.campo {
+    padding: .5rem 1rem;
+    color: var(--cor-texto);
+    font-weight: normal;
+    width: 6ch;
+    background-color: transparent;
+    text-align: center;
+}
+
+.campo:focus {
+    outline: none;
+}
+
+.btMais, .btMenos {
+    --tamanho: 2rem;
+    font-size: .875rem;
+    background-color: var(--cor1);
+    color: white;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btMais:hover, .btMenos:hover {
+    background-color: var(--cor1dark);
+}
+
+.btMais:active, .btMenos:active {
+    transform: translateY(1px);
+}

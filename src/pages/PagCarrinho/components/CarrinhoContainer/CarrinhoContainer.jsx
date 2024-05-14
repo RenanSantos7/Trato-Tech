@@ -1,8 +1,7 @@
 import { Botao } from '../../../../components'
 import styles from './CarrinhoContainer.module.css'
 
-export default function CarrinhoContainer({ children }) {
-	const precoTotal = 160
+export default function CarrinhoContainer({ children, precoTotal = 0 }) {
 	const precoStr = precoTotal.toLocaleString('pt-BR', {
 		style: 'currency',
 		currency: 'BRL',
