@@ -14,12 +14,14 @@ Este é um projeto em React desenvolvido no curso *React: gerenciamento de estad
 - React Router DOM
 - Font Awesome
 - Redux
+- Styled Components
+- Classnames
   
-## Como acessar online
+<!-- ## Como acessar online
 
 O deploy do projeto foi feito pelo [Netilify](https://www.netlify.com/) e está disponível em https://ola-mundo-alura.netlify.app/
 
-O deploy do projeto foi feito pela [Vercel](https://vercel.com/) e está disponível em https://cinetag-renansantos7.vercel.app/
+O deploy do projeto foi feito pela [Vercel](https://vercel.com/) e está disponível em https://cinetag-renansantos7.vercel.app/ -->
 
 ## Como rodar localmente
 
@@ -28,7 +30,7 @@ Este projeto foi criado usando [Vite](https://vite.dev), portanto você pode seg
 No caso, primeiro você precisará baixar o projeto com executando o seguinte comando no terminal:
 
 ```
-git clone https://github.com/RenanSantos7/ola-mundo-react-router.git
+git clone https://github.com/RenanSantos7/Trato-Tech
 ```
 
 Agora, instale as dependências:
