@@ -2,14 +2,25 @@ import styles from './Card.module.css'
 import BtCarrinho from './Botoes/BtCarrinho'
 import BtFavoritar from './Botoes/BtFavoritar'
 import { Link } from 'react-router-dom'
-import { mudarFavorito } from '../../store/reducers/produtos'
 import { useDispatch } from 'react-redux'
+import { mudarFavorito } from '../../store/reducers/produtos'
+import { mudarCarrinho } from '../../store/reducers/carrinho'
+import { useSelector } from 'react-redux'
 
 export default function Card({ produto }) {
 	const dispatch = useDispatch()
+
 	function resolverFavorito(id) {
 		dispatch(mudarFavorito(id))
 	}
+
+	function resolverCarrinho(id) {
+		dispatch(mudarCarrinho(id))
+	}
+
+	const estahNoCarrinho = useSelector(state =>
+		state.carrinho.some(itemNoCarrinho => itemNoCarrinho.id === produto.id),
+	)
 
 	return (
 		<article className={styles.card}>
@@ -42,7 +53,10 @@ export default function Card({ produto }) {
 					/>
 				</div>
 				<div className={styles.carrinho}>
-					<BtCarrinho estahNoCarrinho={false} />
+					<BtCarrinho
+						noCarrinho={estahNoCarrinho}
+						resolverCarrinho={() => resolverCarrinho(produto.id)}
+					/>
 				</div>
 			</footer>
 		</article>

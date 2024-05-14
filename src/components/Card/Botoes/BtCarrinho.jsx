@@ -2,14 +2,20 @@ import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { StyledButton } from './StyledButton'
 
-export default function BtCarrinho({estahNoCarrinho = false}) {
+export default function BtCarrinho({ noCarrinho = false, resolverCarrinho }) {
+    
+    function aoClicar() {
+        resolverCarrinho()
+        console.log('No carrinho:', noCarrinho)
+    }
+
     return (
-        <StyledButton destaque={estahNoCarrinho}>
+        <StyledButton destaque={noCarrinho} onClick={aoClicar}>
             <FontAwesomeIcon
                 icon={faCartPlus}
                 className='icone'
             />
-            <span>{estahNoCarrinho ? 'Remover' : 'Adicionar'}</span>
+            <span>{noCarrinho ? 'Remover' : 'Adicionar'}</span>
         </StyledButton>
     )
 }
